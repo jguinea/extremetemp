@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>World Temperature Extremes</title>
+    <style>
+      body { font-family: sans-serif; max-width: 600px; margin: 2em auto; }
+      .card { border: 1px solid #ddd; padding: 1em; border-radius: 8px; margin-bottom: 1em; }
+      h1 { text-align: center; }
+    </style>
+  </head>
+  <body>
+    <h1>Current Global Extremes</h1>
+
+    <div class="card">
+      <h2>❄️ Coldest Now</h2>
+      <p><strong>{{ cold.name }}</strong> ({{ cold.icao }}, {{ cold.country }})</p>
+      <p>Temp: {{ cold.temp_C }} °C</p>
+      <p>Location: {{ cold.lat }}, {{ cold.lon }}</p>
+    </div>
+
+    <div class="card">
+      <h2>🔥 Hottest Now</h2>
+      <p><strong>{{ hot.name }}</strong> ({{ hot.icao }}, {{ hot.country }})</p>
+      <p>Temp: {{ hot.temp_C }} °C</p>
+      <p>Location: {{ hot.lat }}, {{ hot.lon }}</p>
+    </div>
+  </body>
+</html>
